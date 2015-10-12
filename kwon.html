@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>kwonlr.ly</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="kwon.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="kwon.js"></script>
+    <script src="db.js"></script>
+    <script src="api.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+  
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" onclick="kwon.showAbout();">kwonlr.ly</a>
+          </div>
+  
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li id="home-button">
+                <a href="#" onclick="kwon.showHome();"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+              </li>
+  
+              <li id="messages-button">
+                <a href="#" onclick="kwon.showMessages();"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+              </li>
+  
+              <li id="about-button">
+                <a href="#" onclick="kwon.showAbout();"><span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+              </li>
+            </ul>
+  
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <form class="navbar-form navbar-right" role="search">
+                  <div class="form-group">
+                    <input id="search" type="text" class="form-control" placeholder="Search kwonlr.ly">
+                  </div>
+  
+                  <button type="submit" class="btn btn-default" onClick="kwon.showSearch()">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </form>
+              </li>
+            </ul>
+  
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+  
+      <div id="content"></div>
+    </div>
+    
+  </body>
+</head>

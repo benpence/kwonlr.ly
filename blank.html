@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="kwon.css">
+  </head>
+  <body>
+    <div class="puzzle content">
+      <h1>Javascript Review</h1>
+
+      <p>Setting a variable equal to a value:
+        <pre>
+> var five = 5
+> five
+5
+
+> var oneAndFiveList = [1, five]
+> oneAndFiveList
+[1, 5]
+> oneAndFiveList.length
+2
+> oneAndFiveList[0]
+1
+> oneAndFiveList[1]
+5
+
+> var bob = { name: "Bob", "age": 33 };
+> bob.name
+"Bob"
+> bob["name"]
+"Bob"
+> bob.age
+33</pre>
+      </p>
+
+      <p>The general structure of a <span class="code">function</span>:
+        <pre>
+function isEqualToFive (theNumber) {
+  return theNumber == 5;
+}
+
+function isEqualToFive (aNumber) {
+  return 5 == aNumber;
+}
+        </pre>
+      </p>
+
+      <p>Note that the two function definitions above are the same.</p>
+
+      <h2>Value Functions</h2>
+
+      <p>Suppose you have a number <span class="code">var one = 1;</span></p>
+      
+      <ol>
+        <li>Write a <span class="code">function</span> called <span class="code">addOne</span> which takes in a number and <span class="code">return</span>s that number plus 1.
+          <pre>
+> addOne(one)
+2
+> addOne(2)
+3 </pre>
+        </li>
+        <li>Write a <span class="code">function</span> called <span class="code">isGreaterThanThree</span> which takes in a number and <span class="code">return</span>s whether or not that number is greater than 3.
+          <pre>
+> isGreaterThanThree(one)
+false
+> isGreaterThanThree(3)
+false
+> isGreaterThanThree(4)
+true</pre>
+        </li>
+      </ol>
+
+      <h2>List Functions</h2>
+
+      <p>Suppose you have a list <span class="code">var list = [1, 2, 3, 4, 5];</span></p>
+
+      <ol>
+        <li>Write a <span class="code">function</span> called <span class="code">inList</span> which takes in a number and <span class="code">return</span>s whether or not that number is in <span class="code">list</code>.
+          <pre>
+> inList(1)
+true
+> inList(2)
+true
+> inList(7)
+false</pre>
+        </li>
+        <li>Write a <span class="code">function</span> called <span class="code">addOneToAll</span> which takes in a list of numbers and <span class="code">return</span>s a new list with each number from the old list incremented by 1.
+          <pre>
+> addOneToAll(list)
+[2, 3, 4, 5, 6]
+> addOneToAll([0, 0, 0])
+[1, 1, 1]
+> addOneToAll([])
+[]</pre>
+        </li>
+        <li>Write a <span class="code">function</span> called <span class="code">onlyGreaterThanThree</span> which takes in a list of numbers and <span class="code">return</span>s a new list with each number from the old list that is greater than 3.
+          <pre>
+> onlyGreaterThanThree(list)
+[4, 5]
+> onlyGreaterThanThree([0, 0, 0])
+[]
+</pre>
+        </li>
+        <li>Write a <span class="code">function</span> called <span class="code">sum</span> which takes in a list of numbers and <span class="code">return</span>s the sum of all the numbers in the list.
+          <pre>
+> sum(list)
+15
+> sum( addOneToAll(list) )
+20
+> sum([0])
+0
+</pre>
+        </li>
+      </ol>
+
+    </div>
+  </body>
+</html>
